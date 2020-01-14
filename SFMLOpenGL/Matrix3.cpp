@@ -204,7 +204,7 @@ Matrix3 Matrix3::Rotation(int _angle)
 	return answer;
 }
 
-Matrix3 Matrix3::Translate(int dx, int dy)
+Matrix3 Matrix3::Translate(float dx, float dy)
 {
 	Matrix3 answer = Matrix3{};
 	answer.A11 = 1;

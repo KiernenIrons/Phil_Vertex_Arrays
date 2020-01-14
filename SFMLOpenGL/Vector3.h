@@ -17,6 +17,8 @@ public:
 	double LengthSquared();
 	void Normalise();
 
+	void setZ(float z) { m_z = z; };
+
 	Vector3 operator+(const Vector3 t_right);
 
 	Vector3 operator-(Vector3 V1);

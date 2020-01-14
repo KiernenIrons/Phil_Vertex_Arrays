@@ -117,7 +117,10 @@ void Game::update()
 	{
 		for (int index = 0; index < 8; index++)
 		{
-			m_points[index] = Matrix3::Translate(0, -1) * m_points[index];
+			double z = m_points[index].m_z;
+			m_points[index].setZ(1);
+			m_points[index] = Matrix3::Translate(0, 0.05) * m_points[index];
+			m_points[index].setZ(z);
 		}
 	}
 
@@ -125,7 +128,10 @@ void Game::update()
 	{
 		for (int index = 0; index < 8; index++)
 		{
-			m_points[index] = Matrix3::Translate(0, 1) * m_points[index];
+			double z = m_points[index].m_z;
+			m_points[index].setZ(1);
+			m_points[index] = Matrix3::Translate(0, -0.05) * m_points[index];
+			m_points[index].setZ(z);
 		}
 	}
 
@@ -133,7 +139,10 @@ void Game::update()
 	{
 		for (int index = 0; index < 8; index++)
 		{
-			m_points[index] = Matrix3::Translate(-1, 0) * m_points[index];
+			double z = m_points[index].m_z;
+			m_points[index].setZ(1);
+			m_points[index] = Matrix3::Translate(-0.05, 0) * m_points[index];
+			m_points[index].setZ(z);
 		}
 	}
 
@@ -141,7 +150,10 @@ void Game::update()
 	{
 		for (int index = 0; index < 8; index++)
 		{
-			m_points[index] = Matrix3::Translate(1, 0) * m_points[index];
+			double z = m_points[index].m_z;
+			m_points[index].setZ(1);
+			m_points[index] = Matrix3::Translate(0.05, 0) * m_points[index];
+			m_points[index].setZ(z);
 		}
 	}
 
@@ -156,11 +168,11 @@ void Game::update()
 	{
 		for (int index = 0; index < 8; index++)
 		{
-			m_points[index] = Matrix3::Scale(110.0, 110.0) * m_points[index];
+			m_points[index] = Matrix3::Scale(101.0, 101.0) * m_points[index];
 		}
 	}
 
-	for (int i = 0, j = 0; i < 4, j < 24; i++)
+	for (int i = 0, j = 0; i < 3, j < 24; i++)
 	{
 		vertices[j] = m_points[i].m_x;
 		j++;
