@@ -8,8 +8,6 @@
 #include <Matrix3.h>
 
 using namespace std;
-using namespace sf;
-using namespace gpp;
 
 class Game
 {
@@ -19,7 +17,7 @@ public:
 	void run();
 
 private:
-	Window window;
+	sf::Window window;
 	bool isRunning = false;
 	void initialize();
 	void update();
@@ -28,8 +26,8 @@ private:
 
 	const int NUM_OF_POINTS = 36;
 
-	Clock clock;
-	Time elapsed;
+	sf::Clock clock;
+	sf::Time elapsed;
 
-	float rotationAngle = 0.0f;
+	float rotationAngle = 1.0f;
 };
