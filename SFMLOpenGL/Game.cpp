@@ -119,7 +119,7 @@ void Game::update()
 		{
 			double z = m_points[index].m_z;
 			m_points[index].setZ(1);
-			m_points[index] = Matrix3::Translate(0, 0.05) * m_points[index];
+			m_points[index] = Matrix3::Translate(0, 0.005) * m_points[index];
 			m_points[index].setZ(z);
 		}
 	}
@@ -130,7 +130,7 @@ void Game::update()
 		{
 			double z = m_points[index].m_z;
 			m_points[index].setZ(1);
-			m_points[index] = Matrix3::Translate(0, -0.05) * m_points[index];
+			m_points[index] = Matrix3::Translate(0, -0.005) * m_points[index];
 			m_points[index].setZ(z);
 		}
 	}
@@ -141,7 +141,7 @@ void Game::update()
 		{
 			double z = m_points[index].m_z;
 			m_points[index].setZ(1);
-			m_points[index] = Matrix3::Translate(-0.05, 0) * m_points[index];
+			m_points[index] = Matrix3::Translate(-0.005, 0) * m_points[index];
 			m_points[index].setZ(z);
 		}
 	}
@@ -152,7 +152,7 @@ void Game::update()
 		{
 			double z = m_points[index].m_z;
 			m_points[index].setZ(1);
-			m_points[index] = Matrix3::Translate(0.05, 0) * m_points[index];
+			m_points[index] = Matrix3::Translate(0.005, 0) * m_points[index];
 			m_points[index].setZ(z);
 		}
 	}
@@ -161,14 +161,14 @@ void Game::update()
 	{
 		for (int index = 0; index < 8; index++)
 		{
-			m_points[index] = Matrix3::Scale(99.0, 99.0) * m_points[index];
+			m_points[index] = Matrix3::Scale3D(99.9) * m_points[index];
 		}
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Equal))
 	{
 		for (int index = 0; index < 8; index++)
 		{
-			m_points[index] = Matrix3::Scale(101.0, 101.0) * m_points[index];
+			m_points[index] = Matrix3::Scale3D(100.1) * m_points[index];
 		}
 	}
 

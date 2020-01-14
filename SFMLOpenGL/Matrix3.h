@@ -27,13 +27,13 @@ public:
 
 	Matrix3 operator-(Matrix3 M1);
 
-	static Matrix3 RotationX(int _angle);
+	static Matrix3 RotationX(float _angle);
 
-	static Matrix3 RotationY(int _angle);
+	static Matrix3 RotationY(float _angle);
 
-	static Matrix3 RotationZ(int _angle);
+	static Matrix3 RotationZ(float _angle);
 
-	static Matrix3 Scale3D(int dx);
+	static Matrix3 Scale3D(float dx);
 
 	Matrix3 operator*(double x);
 

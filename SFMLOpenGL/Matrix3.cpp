@@ -237,7 +237,7 @@ Matrix3 Matrix3::Scale(int dx, int dy)
 	return answer;
 }
 
-Matrix3 Matrix3::RotationX(int _angle)
+Matrix3 Matrix3::RotationX(float _angle)
 {
 	double radians = acos(-1) / 180 * _angle;
 	Matrix3 answer = Matrix3{};
@@ -254,7 +254,7 @@ Matrix3 Matrix3::RotationX(int _angle)
 	return answer;
 }
 
-Matrix3 Matrix3::RotationY(int _angle)
+Matrix3 Matrix3::RotationY(float _angle)
 {
 	double radians = acos(-1) / 180 * _angle;
 	Matrix3 answer = Matrix3{};
@@ -271,7 +271,7 @@ Matrix3 Matrix3::RotationY(int _angle)
 	return answer;
 }
 
-Matrix3 Matrix3::RotationZ(int _angle)
+Matrix3 Matrix3::RotationZ(float _angle)
 {
 	double radians = acos(-1) / 180 * _angle;
 	Matrix3 answer = Matrix3{};
@@ -288,7 +288,7 @@ Matrix3 Matrix3::RotationZ(int _angle)
 	return answer;
 }
 
-Matrix3 Matrix3::Scale3D(int dx)
+Matrix3 Matrix3::Scale3D(float dx)
 {
 	Matrix3 answer = Matrix3{};
 	answer.A11 = (double)dx / 100;
